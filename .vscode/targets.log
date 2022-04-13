@@ -7,10 +7,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `cmd_path.o', needed by `pipex'.  Stop.
 
-
-# Make data base, printed on Wed Apr 13 02:06:55 2022
+# Make data base, printed on Wed Apr 13 17:12:33 2022
 
 # Variables
 
@@ -30,31 +28,31 @@ VSCODE_LOG_NATIVE = false
 CURDIR := /Users/otoufah/Desktop/pipex
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 5)
+# makefile (from `Makefile', line 17)
 RM = rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 3)
+# makefile (from `Makefile', line 15)
 CFLAGS = -Wall -Werror -Wextra
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n0000jg00004br/T/vscode-ipc-5345db2c-e20a-4939-92ad-53bb6886db53.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n0000jg00004br/T/vscode-ipc-4d4d4693-6c7f-4083-ad65-f6a84d481387.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.MjdHX8KtsP/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.JAcBixMwEK/Render
 # environment
 PATH = /Users/otoufah/goinfre/otoufah/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/goinfre/otoufah/miniconda3/condabin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 HOME_BREW = /Users/otoufah/goinfre/otoufah
-# makefile (from `Makefile', line 9)
+# makefile (from `Makefile', line 21)
 AR = ar rcs
 # environment
 VSCODE_LOG_STACK = false
@@ -63,7 +61,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.iZpCzhulT3/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.myq73flB7J/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -88,8 +86,8 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 ZSH = /Users/otoufah/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# makefile (from `Makefile', line 11)
-FUNCTIONS = my_library/ft_strsjoin.c my_library/ft_strlen.c my_library/ft_strstr.c my_library/ft_split.c my_library/ft_strlcpy.c cmd_path.c 
+# makefile (from `Makefile', line 23)
+FUNCTIONS = my_library/ft_strsjoin.c my_library/ft_strlen.c my_library/ft_strstr.c my_library/ft_split.c my_library/ft_strlcpy.c cmd_path.c find_path.c 
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -100,7 +98,7 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 7)
+# makefile (from `Makefile', line 19)
 CC = gcc
 # default
 MAKE_VERSION := 3.81
@@ -108,7 +106,7 @@ MAKE_VERSION := 3.81
 USER = otoufah
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 1)
+# makefile (from `Makefile', line 13)
 NAME = pipex
 # environment
 LESS = -R
@@ -131,7 +129,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000006.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -149,7 +147,7 @@ PAGER = less
 # environment
 LC_ALL = C
 # environment
-SECURITYSESSIONID = 186a8
+SECURITYSESSIONID = 186e2
 # automatic
 ^F = $(notdir $^)
 # default
@@ -158,12 +156,12 @@ SUFFIXES :=
 .INCLUDE_DIRS = /usr/local/include
 # environment
 MAKELEVEL := 0
-# makefile (from `Makefile', line 19)
+# makefile (from `Makefile', line 31)
 OBJECTS = $(FUNCTIONS:.c=.o)
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1891
+VSCODE_PID = 13938
 # variable set hash-table stats:
 # Load=75/1024=7%, Rehash=0, Collisions=1/103=1%
 
@@ -173,9 +171,9 @@ VSCODE_PID = 1891
 
 # Directories
 
-# . (device 16777227, inode 3107114): 23 files, no impossibilities.
+# . (device 16777227, inode 3107114): 10 files, no impossibilities.
 
-# 23 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -185,12 +183,9 @@ VSCODE_PID = 1891
 
 # Not a target:
 my_library/ft_split.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-13 02:06:40
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: pipex
 #  Command-line target.
@@ -209,7 +204,7 @@ all: pipex
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-13 02:06:53
+#  Last modified 2022-04-13 17:11:27
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -217,18 +212,15 @@ Makefile:
 
 # Not a target:
 my_library/ft_strlcpy.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-13 02:06:40
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 32):
+#  commands to execute (from `Makefile', line 43):
 	$(RM) $(NAME) $(BONUS)
 	
 
@@ -240,11 +232,15 @@ fclean: clean
 
 # Not a target:
 cmd_path.o:
-#  Implicit rule search has been done.
-#  File does not exist.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+find_path.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 re: fclean all
 #  Implicit rule search has not been done.
@@ -253,51 +249,44 @@ re: fclean all
 
 # Not a target:
 my_library/ft_strstr.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-13 02:06:40
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 29):
+#  commands to execute (from `Makefile', line 40):
 	$(RM)	$(OBJECTS)
 	
 
 # Not a target:
 my_library/ft_strlen.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-13 02:06:40
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 my_library/ft_strsjoin.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-13 02:06:40
-#  File has been updated.
-#  Successfully updated.
+#  File does not exist.
+#  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-pipex: my_library/ft_strsjoin.o my_library/ft_strlen.o my_library/ft_strstr.o my_library/ft_split.o my_library/ft_strlcpy.o cmd_path.o
+pipex: my_library/ft_strsjoin.o my_library/ft_strlen.o my_library/ft_strstr.o my_library/ft_split.o my_library/ft_strlcpy.o cmd_path.o find_path.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 25):
+#  commands to execute (from `Makefile', line 37):
 	$(CC) $(CFLAGS) $(OBJECTS) pipex.c -o $(NAME) 
 	
 
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/37=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/39=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -309,6 +298,8 @@ pipex: my_library/ft_strsjoin.o my_library/ft_strlen.o my_library/ft_strstr.o my
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Apr 13 02:06:55 2022
+# Finished Make data base on Wed Apr 13 17:12:33 2022
 
  
+make: *** No rule to make target `my_library/ft_strsjoin.o', needed by `pipex'.  Stop.
+

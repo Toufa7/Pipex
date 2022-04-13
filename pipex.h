@@ -1,18 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pipex.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/13 15:17:01 by otoufah           #+#    #+#             */
+/*   Updated: 2022/04/13 16:58:14 by otoufah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PIPEX_H
 # define PIPEX_H
 
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <fcntl.h>
 
-typedef struct s_list
+struct s_fildescriptor
 {
-	int		fd;
-	pid_t   pid;
-}	cmd;
+	int	_1;
+	int	_2;
+}	fd;
 
+struct s_processes_ids
+{
+	pid_t	_1;
+	pid_t	_2;
+}	pid;
 
 char	*cmd_path(char *cmd, char **env);
 char	*find_path(char **env);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/13 16:59:39 by otoufah           #+#    #+#             */
+/*   Updated: 2022/04/13 17:00:26 by otoufah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../pipex.h"
 
 char	*ft_strstr(const char *haystack, const char *needle)
@@ -23,4 +35,3 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	}
 	return (NULL);
 }
-
