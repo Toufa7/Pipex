@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/otoufah/Desktop/pipex'
+gcc -Wall -Werror -Wextra   -c -o cmd_path.o cmd_path.c
+gcc -Wall -Werror -Wextra my_library/ft_strsjoin.o my_library/ft_strlen.o my_library/ft_strstr.o my_library/ft_split.o my_library/ft_strlcpy.o cmd_path.o pipex.c -o pipex 
+make: Leaving directory `/Users/otoufah/Desktop/pipex'
+ 

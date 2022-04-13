@@ -13,6 +13,7 @@ FUNCTIONS =	my_library/ft_strsjoin.c\
 			my_library/ft_strstr.c\
 			my_library/ft_split.c\
 			my_library/ft_strlcpy.c\
+			cmd_path.c\
 			
 			
 OBJECTS =	$(FUNCTIONS:.c=.o)

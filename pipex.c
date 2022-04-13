@@ -20,62 +20,71 @@ char	*find_path(char **env)
 /* Splitting the path by : and check it the command passed is located to some of the paths then return it */
 
 
-char	*cmd_path(char *av[], char **env)
-{
-	int i;
-	char *path;
-	char *join;
-	char **envi;
-	int is_there;
-
-	path = find_path(env);
-	envi = ft_split(path, ':');
-	i = 0;
-	while (envi[i])
-	{
-		join = ft_strsjoin(envi[i],"/", av[1]);
-		is_there = access(join, X_OK);
-		if (is_there == 0)
-		{
-			return (join);
-		}
-		i++;
-	}
-	return (NULL);
-}
-
 /* Creating a Child and start executing the command passed av[1] by the path return it befor */
 
+
+void	first_cmd(char **env, char *av[], int fd1, int *pipe)
+{
+	char **spl;
+	char *cmd;
+
+	spl = ft_split(av[2], ' ');
+	cmd = cmd_path(spl[0], env);
+	
+	dup2(fd1, 0);
+	dup2(pipe[1], 1);
+	close(fd1);
+	close(pipe[0]);
+	close(pipe[1]);
+	execve(cmd, spl, env);
+}
+
+
+void	second_cmd(char **env, char *av[], int fd2, int *pipe)
+{
+	char **spl;
+	char *cmd;
+
+	spl = ft_split(av[3], ' ');
+	cmd = cmd_path(spl[0], env);
+
+	dup2(pipe[0], 0);
+	dup2(fd2, 1);
+	close(fd2);
+	close(pipe[0]);
+	close(pipe[1]);
+	execve(cmd, spl, env);
+}
+ 
+ 
 void	run(char *av[], char **env)
 {
-	pid_t pid;
-	int status;
-	int ret;
-	char *cmd = cmd_path(av, env);
+	pid_t pid_1;
+	pid_t pid_2;
+	int fd[2];
+    int fd1 = open(av[1], O_RDONLY);
+	int fd2 = open(av[4], O_CREAT | O_RDWR, 0777);
 
-	pid = fork();
-	if (pid == 0)
+	pipe(fd);
+	pid_1 = fork();
+	if (pid_1 == 0)
 	{
-		printf("Well i'm a Child\n");
-		printf("Executing %s\n",cmd);
-        printf("-----------------------\n");
-		ret = execve(cmd, &av[1], env);
-		if (ret == -1)
-		{
-			perror("ERRRRORRRR");
-		}
-		printf("--------DONE--------\n");
-		return ;
+		first_cmd(env, av, fd1, fd);
+		exit(1);
 	}
-	else
+
+	pid_2 = fork();
+	if (pid_2 == 0)
 	{
-		pid = waitpid(pid, &status, 0);
+		second_cmd(env, av, fd2, fd);
+		exit(1);
+    }
 
-	}
-	printf("Parent pid = %d\n",getpid());
-    printf("Child pid = %d , Return status : %d\n", pid, WEXITSTATUS(status));
-
-}
+	close(fd[0]);
+	close(fd[1]);
+	waitpid(pid_1, NULL, 0);
+	waitpid(pid_2, NULL, 0);
+}	
 
 int	main(int ac, char *argv[], char **env)
 {
@@ -85,3 +94,5 @@ int	main(int ac, char *argv[], char **env)
 		// printf("Ur Path -> %s\n",cmd_path(argv, env));
 	}
 }
+
+
