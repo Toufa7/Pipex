@@ -29,15 +29,11 @@ char	*cmd_path(char *cmd, char **env)
 		is_there = access(join, X_OK);
 		if (is_there == 0)
 		{
-			printf("Path ==> %s\n", join);
 			return (join);
 		}
 		else
 			free(join);
 		i++;
 	}
-	return (NULL);
+	return (cmd);
 }
-
-/* Splitting the path by : and check it the command passed is 
- * located to some of the paths then return it */

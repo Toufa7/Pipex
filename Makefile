@@ -27,6 +27,11 @@ FUNCTIONS =	my_library/ft_strsjoin.c\
 			my_library/ft_strlcpy.c\
 			cmd_path.c\
 			find_path.c\
+			data_flow.c\
+			first_cmd.c\
+			second_cmd.c\
+			opening_errors.c\
+			closing_fd.c\
 			
 OBJECTS =	$(FUNCTIONS:.c=.o)
 
@@ -34,7 +39,7 @@ all : $(NAME)
 
 
 $(NAME) :	$(OBJECTS)
-			$(CC) $(CFLAGS) $(OBJECTS) pipex.c -o $(NAME) 
+			$(CC) $(CFLAGS) $(OBJECTS) pipex.c -o $(NAME)
 
 clean :
 			$(RM)	$(OBJECTS)

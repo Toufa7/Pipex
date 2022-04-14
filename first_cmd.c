@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.c                                            :+:      :+:    :+:   */
+/*   first_cmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 15:16:52 by otoufah           #+#    #+#             */
-/*   Updated: 2022/04/13 17:01:39 by otoufah          ###   ########.fr       */
+/*   Created: 2022/04/14 15:40:41 by otoufah           #+#    #+#             */
+/*   Updated: 2022/04/14 15:40:42 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-int	main(int ac, char *argv[], char **env)
+void	first_cmd(char **env, char *av[], int fd1, int *pipe)
 {
-	if (ac == 5)
+	char	**spl;
+	char	*cmd;
+
+	spl = ft_split(av[2], ' ');
+	cmd = cmd_path(spl[0], env);
+	dup2(fd1, 0);
+	dup2(pipe[1], 1);
+	close(fd1);
+	closing_fd(pipe);
+	if (execve(cmd, spl, env) == -1)
 	{
-		data_flow(argv, env);
+		perror(av[2]);
+		exit(1);
 	}
-	else
-		printf("Invalid argument\n");
+	exit(0);
 }

@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.c                                            :+:      :+:    :+:   */
+/*   closing_fd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 15:16:52 by otoufah           #+#    #+#             */
-/*   Updated: 2022/04/13 17:01:39 by otoufah          ###   ########.fr       */
+/*   Created: 2022/04/14 15:40:26 by otoufah           #+#    #+#             */
+/*   Updated: 2022/04/14 15:40:27 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-int	main(int ac, char *argv[], char **env)
+void	closing_fd(int *fd)
 {
-	if (ac == 5)
-	{
-		data_flow(argv, env);
-	}
-	else
-		printf("Invalid argument\n");
+	close(fd[0]);
+	close(fd[1]);
 }

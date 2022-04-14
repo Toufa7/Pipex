@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.c                                            :+:      :+:    :+:   */
+/*   opening_errors.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 15:16:52 by otoufah           #+#    #+#             */
-/*   Updated: 2022/04/13 17:01:39 by otoufah          ###   ########.fr       */
+/*   Created: 2022/04/14 15:41:02 by otoufah           #+#    #+#             */
+/*   Updated: 2022/04/14 15:41:03 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-int	main(int ac, char *argv[], char **env)
+void	opening_errors(int fd)
 {
-	if (ac == 5)
+	if (fd == -1)
 	{
-		data_flow(argv, env);
+		strerror(fd);
+		exit (EXIT_FAILURE);
 	}
-	else
-		printf("Invalid argument\n");
 }

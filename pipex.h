@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <string.h>
 
 struct s_fildescriptor
 {
@@ -37,5 +38,10 @@ char	*ft_strstr(const char *haystack, const char *needle);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+void	second_cmd(char **env, char *av[], int fd2, int *pipe);
+void	first_cmd(char **env, char *av[], int fd1, int *pipe);
+void	data_flow(char *av[], char **env);
+void	closing_fd(int *fd);
+void	opening_errors(int fd);
 
 #endif

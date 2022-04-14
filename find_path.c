@@ -27,5 +27,3 @@ char	*find_path(char **env)
 	}
 	return (NULL);
 }
-
-/* This funtion well return the directories to be searched to find a command */
