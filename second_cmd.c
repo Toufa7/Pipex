@@ -16,17 +16,20 @@ void	second_cmd(char **env, char *av[], int fd2, int *pipe)
 {
 	char	**spl;
 	char	*cmd;
+	int		duplicate_1;
+	int		duplicate_2;
 
 	spl = ft_split(av[3], ' ');
 	cmd = cmd_path(spl[0], env);
-	dup2(pipe[0], 0);
-	dup2(fd2, 1);
+	duplicate_1 = dup2(fd2, STDOUT_FILENO);
+	if (duplicate_1 == -1)
+		dup2_error("Failed to duplicate the oldfd\n");
+	duplicate_2 = dup2(pipe[0], STDIN_FILENO);
+	if (duplicate_2 == -1)
+		dup2_error("Failed to duplicate the oldfd\n");
 	close(fd2);
 	closing_fd(pipe);
 	if (execve(cmd, spl, env) == -1)
-	{
-		perror(av[3]);
-		exit(EXIT_FAILURE);
-	}
+		execve_error(av, 3);
 	exit(EXIT_SUCCESS);
 }

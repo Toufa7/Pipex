@@ -30,9 +30,8 @@ FUNCTIONS =	my_library/ft_strsjoin.c\
 			data_flow.c\
 			first_cmd.c\
 			second_cmd.c\
-			opening_errors.c\
-			closing_fd.c\
-			
+			errors_handling.c\
+
 OBJECTS =	$(FUNCTIONS:.c=.o)
 
 all : $(NAME)

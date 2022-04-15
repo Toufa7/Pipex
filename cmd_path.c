@@ -26,7 +26,7 @@ char	*cmd_path(char *cmd, char **env)
 	while (envi[i])
 	{
 		join = ft_strsjoin(envi[i], '/', cmd);
-		is_there = access(join, X_OK);
+		is_there = access(join, F_OK & X_OK);
 		if (is_there == 0)
 		{
 			return (join);
