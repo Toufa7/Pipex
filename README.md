@@ -71,6 +71,7 @@ Returns 0 if all permissions are granted, otherwise –1
 The access() system call checks the accessibility of the file specified in pathname
 
 access modes
+
 F_OK => Does the file exist?
 R_OK => Can the file be read?
 W_OK => Can the file be written?
