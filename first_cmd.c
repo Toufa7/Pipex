@@ -6,7 +6,7 @@
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 15:40:41 by otoufah           #+#    #+#             */
-/*   Updated: 2022/04/14 15:40:42 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/04/15 02:06:26 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	first_cmd(char **env, char *av[], int fd1, int *pipe)
 	int		dup_2;
 
 	spl = ft_split(av[2], ' ');
-
 	cmd = cmd_path(spl[0], env);
 	dup_1 = dup2(fd1, STDIN_FILENO);
 	if (dup_1 == -1)

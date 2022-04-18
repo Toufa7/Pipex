@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/15 02:14:38 by otoufah           #+#    #+#             */
-/*   Updated: 2022/04/15 02:14:39 by otoufah          ###   ########.fr       */
+/*   Created: 2022/04/15 02:03:08 by otoufah           #+#    #+#             */
+/*   Updated: 2022/04/15 02:08:04 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,10 @@ void	closing_fd(int *fd)
 {
 	close(fd[0]);
 	close(fd[1]);
+}
+
+void	waitpid_error(const char *s)
+{
+	perror (s);
+	exit (EXIT_FAILURE);
 }
