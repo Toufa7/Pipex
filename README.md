@@ -72,10 +72,10 @@ The access() system call checks the accessibility of the file specified in pathn
 
 access modes
 
-F_OK => Does the file exist?
-R_OK => Can the file be read?
-W_OK => Can the file be written?
-X_OK => Can the file be executed?
+    F_OK => Does the file exist?
+    R_OK => Can the file be read?
+    W_OK => Can the file be written?
+    X_OK => Can the file be executed?
 
 
 Waiting on a Child Process ;
