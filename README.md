@@ -96,6 +96,9 @@ completion of a specific child; we can only wait for the next child that termina
 # Ressources
 
 https://www.rozmichelle.com/pipes-forks-dups/
+
 https://www.gnu.org/software/libc/manual/html_node/Processes.html
+
 The Amazing book by Michael Kerrisk
+
 The Linux Programming Interface: A Linux and UNIX System Programming Handbook
