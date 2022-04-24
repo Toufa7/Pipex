@@ -56,10 +56,6 @@ This program will run a process and will list for us files and directories in th
 While the child is executing a new program, the parent process normally waits for the child process to die.
 It picks the exit status of the child before it does something else.
 
-
-
-
-
         #include <unistd.h>
         #include <stdio.h>
         
@@ -76,6 +72,8 @@ It picks the exit status of the child before it does something else.
             waitpid(pid, NULL, 0);
             return (0);
         }
+        
+
 
 
 Process A process is defined as an “instance” of an executing program
