@@ -1,3 +1,17 @@
+The three important phases to understand the project are follows:
+
+# FORK
+
+[Man Fork](https://man7.org/linux/man-pages/man2/fork.2.html)
+
+
+
+
+
+
+
+Process A process is defined as an “instance” of an executing program
+
 Splitting the path by : and check it the command passed is located to some of the paths then return it
 
 This function well return the directories to be searched to find a command */
