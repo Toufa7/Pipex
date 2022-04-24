@@ -1,13 +1,81 @@
 The three important phases to understand the project are follows:
 
-# FORK
+# Fork
 
 [Man Fork](https://man7.org/linux/man-pages/man2/fork.2.html)
 
+Forking creates a process by creating a copy of the existing process , The new process has a different PID and the process that created it becomes its parent.
+
+        #include <unistd.h>
+        #include <stdio.h>
+
+        int main(void)
+        {
+                pid_t   pid;
+
+                pid = fork();
+
+                if (pid == 0)
+                {
+                        printf("I'm a Child Process\n");
+                }
+                return (0);
+        }
+
+# Execve
+
+[Man Execve](https://man7.org/linux/man-pages/man2/execve.2.html)
+
+Forking creates a process but it is not enough to run a new program
+
+
+        #include <unistd.h>
+        #include <stdio.h>
+       
+        int main(int ac, char *av[], char **env)
+        {
+            pid_t   pid;
+        
+            pid = fork();
+        
+            if (pid == 0)
+            {
+                execve("/bin/ls", &av[0], env);
+            }
+            return (0);
+        }
+        
+This program will run a process and will list for us files and directories in the current directory and take as argument the option for command like "-la"
+
+# Wait
+
+[Man Wait](https://man7.org/linux/man-pages/man2/wait.2.html)
+
+[See Also Waitpid](https://man7.org/linux/man-pages/man3/waitpid.3p.html)
+
+While the child is executing a new program, the parent process normally waits for the child process to die.
+It picks the exit status of the child before it does something else.
 
 
 
 
+
+        #include <unistd.h>
+        #include <stdio.h>
+        
+        int main(int ac, char *av[], char **env)
+        {
+            pid_t   pid;
+        
+            pid = fork();
+        
+            if (pid == 0)
+            {
+                execve("/bin/ls", &av[0], env);
+            }
+            waitpid(pid, NULL, 0);
+            return (0);
+        }
 
 
 Process A process is defined as an “instance” of an executing program
