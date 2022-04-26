@@ -1,3 +1,11 @@
+Pipex a 1337's a project that aimes to teach you the concept of processes and pipe and the way command using '|' can communicate between each others
+
+let's take an example
+
+        $ls | wc -l
+        
+so the list command list all files and direcotories and gives his output to the second command and then the ouput print on the STDOUT
+ 
 The three important phases to understand the project are follows:
 
 # Fork
