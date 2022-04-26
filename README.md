@@ -1,18 +1,17 @@
-Pipex a 1337's a project that aimes to teach you the concept of processes and pipe and the way command using '|' can communicate between each others
-
+Pipex a 1337's a project that aims to teach you the concept of processes and pipe and the way commands using '|' can communicate with each others
 let's take an example
 
         $ls | wc -l
         
-so the list command list all files and direcotories and gives his output to the second command and then the ouput print on the STDOUT
- 
+so the list command lists all files and directories and gives his output to the second command and then the output print on the STDOUT
+
 The three important phases to understand the project are follows:
 
 # Fork
 
 [Man Fork](https://man7.org/linux/man-pages/man2/fork.2.html)
 
-Forking creates a process by creating a copy of the existing process , The new process has a different PID and the process that created it becomes its parent.
+The fork() function creates a new child process by sharing the same code as the calling process and duplicating the calling process's data to give the child process an exact copy. Most process resources are inherited.
 
         #include <unistd.h>
         #include <stdio.h>
@@ -29,6 +28,10 @@ Forking creates a process by creating a copy of the existing process , The new p
                 }
                 return (0);
         }
+
+Good question well be why we need to creat a process ?!
+
+For this case, we need to create a process that will handle the running of the first command and so on ...
 
 # Execve
 
@@ -81,6 +84,8 @@ It picks the exit status of the child before it does something else.
             return (0);
         }
         
+
+
 
 
 
@@ -186,6 +191,8 @@ completion of a specific child; we can only wait for the next child that termina
 https://www.rozmichelle.com/pipes-forks-dups/
 
 https://www.gnu.org/software/libc/manual/html_node/Processes.html
+
+http://www.qnx.com/developers/docs/7.1/
 
 The Amazing book by Michael Kerrisk
 
