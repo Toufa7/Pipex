@@ -197,3 +197,5 @@ http://www.qnx.com/developers/docs/7.1/
 The Amazing book by Michael Kerrisk
 
 The Linux Programming Interface: A Linux and UNIX System Programming Handbook
+
+https://en.wikipedia.org/wiki/The_Linux_Programming_Interface
