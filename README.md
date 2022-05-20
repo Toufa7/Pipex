@@ -87,7 +87,7 @@ It picks the exit status of the child before it does something else.
 
 
 
-
+# What's a Process :
 
 Process A process is defined as an “instance” of an executing program
 
@@ -169,7 +169,6 @@ access modes
     R_OK => Can the file be read?
     W_OK => Can the file be written?
     X_OK => Can the file be executed?
-
 
 Waiting on a Child Process ;
 
