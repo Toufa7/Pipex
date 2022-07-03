@@ -13,6 +13,8 @@ The three important phases to understand the project are follows:
 
 The fork() function creates a new child process by sharing the same code as the calling process and duplicating the calling process's data to give the child process an exact copy. Most process resources are inherited.
 
+When a new process is created via fork(),  it inherits a copy of its parent’s environment, 
+
         #include <unistd.h>
         #include <stdio.h>
 
